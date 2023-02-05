@@ -34,7 +34,7 @@ void insertEnd(node* *head,int value){
     
     last->next=newNode;
 }
-void insertMiddle(node* previous,int value){
+void insertAtprevious(node* previous,int value){
     if(previous->next==NULL){
         cout<<"previous next is not NULL"<<endl;
         return;
@@ -54,7 +54,7 @@ int main(){
     secound->data=2;
     secound->next=NULL;
     insertBegin(&head,10);
-    insertMiddle(head,40);
+    insertAtprevious(head,40);
     insertEnd(&head,50);
     printing(head);
 }
